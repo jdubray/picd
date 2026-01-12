@@ -1,0 +1,16 @@
+{
+  "name": "pictd",
+  "version": "0.1.0",
+  "description": "Clipboard image saver with system tray and thumbnail preview",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2"
+  }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pictd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>pictd</h1>
+      <div class="status">
+        <span id="status-indicator" class="indicator"></span>
+        <span id="status-text">Monitoring</span>
+        <button id="toggle-btn" class="btn">Pause</button>
+      </div>
+    </header>
+
+    <div class="settings">
+      <label>
+        Save to:
+        <input type="text" id="save-dir" readonly>
+      </label>
+    </div>
+
+    <div class="log">
+      <h2>Saved Images</h2>
+      <div id="image-grid" class="image-grid">
+        <p class="empty-message" id="empty-message">No images saved yet. Copy an image to your clipboard!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

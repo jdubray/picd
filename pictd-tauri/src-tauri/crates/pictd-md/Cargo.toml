@@ -1,0 +1,18 @@
+[package]
+name = "pictd-md"
+version = "0.1.0"
+description = "Clipboard image saver for markdown documentation"
+authors = ["you"]
+edition = "2021"
+
+[[bin]]
+name = "pictd-md"
+path = "src/main.rs"
+
+[dependencies]
+pictd-core = { path = "../pictd-core" }
+image = "0.25"
+clap = { version = "4", features = ["derive"] }
+ratatui = "0.29"
+crossterm = "0.28"
+anyhow = "1"

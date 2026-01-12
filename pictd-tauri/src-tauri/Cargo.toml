@@ -1,0 +1,43 @@
+[workspace]
+members = [".", "crates/pictd-core", "crates/pictd-md"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+arboard = { version = "3", features = ["image-data"] }
+image = "0.25"
+chrono = "0.4"
+dirs = "5"
+base64 = "0.22"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+regex = "1"
+clap = { version = "4", features = ["derive"] }
+ratatui = "0.29"
+crossterm = "0.28"
+anyhow = "1"
+
+[package]
+name = "pictd"
+version = "0.1.0"
+description = "Clipboard image saver"
+authors = ["you"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+pictd-core = { path = "crates/pictd-core" }
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-shell = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+open = "5"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
